@@ -7,9 +7,10 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Legal from "./pages/Legal";
+import ProductPage from "./pages/ProductPage";
 
 function Router() {
-  return <Switch><Route path="/" component={Home} /><Route path="/privacidade"><Legal kind="privacy" /></Route><Route path="/termos"><Legal kind="terms" /></Route><Route path="/cookies"><Legal kind="cookies" /></Route><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch>;
+  return <Switch><Route path="/" component={Home} /><Route path="/produto/:id" component={ProductPage} /><Route path="/privacidade"><Legal kind="privacy" /></Route><Route path="/termos"><Legal kind="terms" /></Route><Route path="/cookies"><Legal kind="cookies" /></Route><Route path="/404" component={NotFound} /><Route component={NotFound} /></Switch>;
 }
 
 export default function App() {
