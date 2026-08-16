@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cabides-atelier.vercel.app/sitemap.xml
